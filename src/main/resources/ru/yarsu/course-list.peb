@@ -1,0 +1,16 @@
+    {% extends "./layout.peb" %}
+    {% block nav%}{% endblock %}
+    {% block content %}
+
+<div class="grid-container">
+    <h1>Список курсов</h1>
+    {% for course in courses %}
+        <div class="callout">
+             <a href="courses/{{ course.id }}.html">{{ course.courseName }}</a>
+             <ul>
+                <li><b>Преподаватель:</b> {{ course.lecturerFullName }}</li>
+                <li> {{ course.description }} </li>
+             </ul>
+        </div>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,130 @@
+    {% extends "./layout.peb" %}
+
+    {% block nav%}{% endblock %}
+
+    {% block content %}
+
+<div class="grid-container">
+    <h1>Расписание</h1>
+    <div class="callout">
+        <h3 class="subheader">Понедельник</h3>
+        <ol>
+        {% for schedule in scheduleItems %}
+            {% if schedule.dayOfWeek == Monday %}
+                <li>
+                {% for course in courses %}
+                    {% if course.id == schedule.courseId %}
+                        <ul>
+                            <li> <b>Курс:</b> {{ course.courseName }}</li>
+                            <li> <b>Аудитория:</b> {{ schedule.auditoriumNumber}}</li>
+                            <li> <b>Начало занятия:</b> {{ schedule.startTime}}</li>
+                        </ul> <br>
+                    {% endif %}
+                {% endfor %}
+                </li>
+            {% endif %}
+        {% endfor %}
+        <ol>
+    </div>
+    <div class="callout">
+        <h3 class="subheader">Вторник</h3>
+        <ol>
+        {% for schedule in scheduleItems %}
+        {% if schedule.dayOfWeek == Tuesday %}
+                <li>
+                {% for course in courses %}
+            {% if course.id == schedule.courseId %}
+                        <ul>
+                            <li> <b>Курс:</b> {{ course.courseName }}</li>
+                            <li> <b>Аудитория:</b> {{ schedule.auditoriumNumber}}</li>
+                            <li> <b>Начало занятия:</b> {{ schedule.startTime}}</li>
+                        </ul> <br>
+                    {% endif %}
+        {% endfor %}
+                </li>
+            {% endif %}
+    {% endfor %}
+        <ol>
+    </div>
+    <div class="callout">
+        <h3 class="subheader">Среда</h3>
+        <ol>
+        {% for schedule in scheduleItems %}
+        {% if schedule.dayOfWeek == Wednesday %}
+                <li>
+                {% for course in courses %}
+            {% if course.id == schedule.courseId %}
+                        <ul>
+                            <li> <b>Курс:</b> {{ course.courseName }}</li>
+                            <li> <b>Аудитория:</b> {{ schedule.auditoriumNumber}}</li>
+                            <li> <b>Начало занятия:</b> {{ schedule.startTime}}</li>
+                        </ul> <br>
+                    {% endif %}
+        {% endfor %}
+                </li>
+            {% endif %}
+    {% endfor %}
+        <ol>
+    </div>
+    <div class="callout">
+        <h3 class="subheader">Четверг</h3>
+        <ol>
+        {% for schedule in scheduleItems %}
+        {% if schedule.dayOfWeek == Thursday %}
+                <li>
+                {% for course in courses %}
+            {% if course.id == schedule.courseId %}
+                        <ul>
+                            <li> <b>Курс:</b> {{ course.courseName }}</li>
+                            <li> <b>Аудитория:</b> {{ schedule.auditoriumNumber}}</li>
+                            <li> <b>Начало занятия:</b> {{ schedule.startTime}}</li>
+                        </ul> <br>
+                    {% endif %}
+        {% endfor %}
+                </li>
+            {% endif %}
+    {% endfor %}
+        <ol>
+    </div>
+    <div class="callout">
+        <h3 class="subheader">Пятница</h3>
+        <ol>
+        {% for schedule in scheduleItems %}
+        {% if schedule.dayOfWeek == Friday %}
+                <li>
+                {% for course in courses %}
+            {% if course.id == schedule.courseId %}
+                        <ul>
+                            <li> <b>Курс:</b> {{ course.courseName }}</li>
+                            <li> <b>Аудитория:</b> {{ schedule.auditoriumNumber}}</li>
+                            <li> <b>Начало занятия:</b> {{ schedule.startTime}}</li>
+                        </ul> <br>
+                    {% endif %}
+        {% endfor %}
+                </li>
+            {% endif %}
+    {% endfor %}
+        <ol>
+    </div>
+    <div class="callout">
+        <h3 class="subheader">Суббота</h3>
+        <ol>
+        {% for schedule in scheduleItems %}
+        {% if schedule.dayOfWeek == Saturday %}
+                <li>
+                {% for course in courses %}
+            {% if course.id == schedule.courseId %}
+                        <ul>
+                            <li> <b>Курс:</b> {{ course.courseName }}</li>
+                            <li> <b>Аудитория:</b> {{ schedule.auditoriumNumber}}</li>
+                            <li> <b>Начало занятия:</b> {{ schedule.startTime}}</li>
+                        </ul> <br>
+                    {% endif %}
+        {% endfor %}
+                </li>
+            {% endif %}
+    {% endfor %}
+        <ol>
+    </div>
+{% endblock %}
+

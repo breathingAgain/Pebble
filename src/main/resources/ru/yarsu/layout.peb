@@ -1,0 +1,29 @@
+<!doctype html>
+<html class="no-js" lang="ru" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% block nav%}{% endblock %}public/css/foundation.css">
+        <link rel="stylesheet" href="{% block nav%}{% endblock %}public/css/app.css">
+        <link rel="stylesheet" href="{% block nav%}{% endblock %}public/css/foundation.min.css">
+    </head>
+    <body>
+        <div class="grid-container">
+       <div class="top-bar">
+            <ul class="menu">
+                <li><a href="{% block nav%}{% endblock %}course-list.html">Список курсов</a></li>
+                <li><a href="{% block nav%}{% endblock %}schedule.html">Учебное расписание</a></li>
+            </ul>
+            </div>
+       </div>
+   {% block content %}
+{% endblock %}
+        
+        <script src="/public/js/vendor/jquery.js"></script>
+        <script src="/public/js/vendor/what-input.js"></script>
+        <script src="/public/js/vendor/foundation.js"></script>
+        <script src="/public/js/app.js"></script>
+    </body>
+</html>
+
